@@ -87,9 +87,9 @@ void draw(){
 
 
 void opdaterFysiskVerden(){
-   t = t + 0.2;
+   t = t + 0.1;
    //t bliver kun 0,2 større hver frame, så er det nemmere at se fuglen.
-   if(y >= 0){
+   if(y <= 800){
    //Hvis fuglen har ramt jorden, skal den ikke flyve længere.  
      
      if(b > 0){
@@ -116,7 +116,7 @@ void opdaterFysiskVerden(){
        y = 0.5 * g * t * t - v0 * t + y0;
        
      }else{
-       A = sin(v);
+       A = sin(v)*2;
        E = 50 * (L/10) * (L/10);
      
        u0 = sqrt((2 * E)/(m * (1 + A * A)));
